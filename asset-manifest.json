@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/click-chat-frontend/static/js/main.377aa412.js",
+    "main.js": "/click-chat-frontend/static/js/main.bad010bc.js",
     "index.html": "/click-chat-frontend/index.html",
-    "main.377aa412.js.map": "/click-chat-frontend/static/js/main.377aa412.js.map"
+    "main.bad010bc.js.map": "/click-chat-frontend/static/js/main.bad010bc.js.map"
   },
   "entrypoints": [
-    "static/js/main.377aa412.js"
+    "static/js/main.bad010bc.js"
   ]
 }

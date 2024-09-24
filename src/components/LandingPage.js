@@ -39,7 +39,7 @@ function LandingPage() {
             <Button variant="contained" color="primary" size="large">Join ClickChat</Button>
           </Grid>
           <Grid item xs={12} md={6}>
-            <img src="/tmp-img/cover-landing.jpg" alt="Chat App" style={{ width: '100%' }} />
+            <img src={`${process.env.PUBLIC_URL}/tmp-img/cover-landing.jpg`} alt="Chat App" style={{ width: '100%' }} />
           </Grid>
         </Grid>
       </Container>
@@ -53,28 +53,28 @@ function LandingPage() {
           <Grid container spacing={4}>
             <Grid item xs={12} md={3}>
               <Paper elevation={3} sx={{ padding: 2 }}>
-                <img src="/tmp-img/one-to-one-chat.PNG" alt="One-to-One Chat" style={{ width: '100%', height: '80%' }} />
+                <img src={`${process.env.PUBLIC_URL}/tmp-img/one-to-one-chat.PNG`} alt="One-to-One Chat" style={{ width: '100%', height: '80%' }} />
                 <Typography variant="h6" color="primary">One-to-One Chat</Typography>
                 <Typography>Connect with friends and family privately through our one-to-one chat feature.</Typography>
               </Paper>
             </Grid>
             <Grid item xs={12} md={3}>
               <Paper elevation={3} sx={{ padding: 2 }}>
-                <img src="/tmp-img/group-chat.jpg" alt="Room Chat" style={{ width: '100%', height: '80%' }} />
+                <img src={`${process.env.PUBLIC_URL}/tmp-img/group-chat.jpg`} alt="Room Chat" style={{ width: '100%', height: '80%' }} />
                 <Typography variant="h6" color="primary">Room Chat</Typography>
                 <Typography>Create or join rooms to chat with multiple people at once.</Typography>
               </Paper>
             </Grid>
             <Grid item xs={12} md={3}>
               <Paper elevation={3} sx={{ padding: 2 }}>
-                <img src="/tmp-img/profile-sm-3.jpg" alt="Profile" style={{ width: '100%', height: '80%' }} />
+                <img src={`${process.env.PUBLIC_URL}/tmp-img/profile-sm-3.jpg`} alt="Profile" style={{ width: '100%', height: '80%' }} />
                 <Typography variant="h6" color="primary">Profile</Typography>
                 <Typography>Create and customize your personal profile to reflect your personality.</Typography>
               </Paper>
             </Grid>
             <Grid item xs={12} md={3}>
               <Paper elevation={3} sx={{ padding: 2 }}>
-                <img src="/tmp-img/moments-photo.avif" alt="Coming Soon" style={{ width: '100%', height: '80%' }} />
+                <img src={`${process.env.PUBLIC_URL}/tmp-img/moments-photo.avif`} alt="Coming Soon" style={{ width: '100%', height: '80%' }} />
                 <Typography variant="h6" color="primary">Coming Soon</Typography>
                 <Typography>Soon, you'll be able to share images and text posts with your friends!</Typography>
               </Paper>

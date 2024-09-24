@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Paper, Typography, TextField, IconButton, Box, Avatar, List, ListItem, ListItemAvatar, ListItemText, ListItemButton } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, TextField, Container, Box, Grid, Paper, IconButton, Avatar, List, ListItemButton, ListItemAvatar, ListItemText } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import VideoCallIcon from '@mui/icons-material/VideoCall';
@@ -21,18 +21,18 @@ function Chat() {
   };
 
   return (
-    <div>
+    <>
       {/* Navbar */}
       <AppBar position="static" color="primary">
-          <Toolbar>
-            <Typography variant="h6" sx={{ flexGrow: 1 }}>
-              ClickChat
-            </Typography>
-            <Button color="inherit">Logout</Button>
-          </Toolbar>
-        </AppBar>
+        <Toolbar>
+          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+            ClickChat
+          </Typography>
+          <Button color="inherit">Logout</Button>
+        </Toolbar>
+      </AppBar>
 
-      <Grid container sx={{ height: '100vh', padding: 2 }}>
+      <Grid container sx={{ height: '90vh', padding: 2 }}>
         {/* Sidebar with Chats */}
         <Grid item xs={3}>
           <Paper sx={{ height: '100%', padding: 2, backgroundColor: '#F5F7FA' }}>
@@ -62,6 +62,7 @@ function Chat() {
         {/* Chat Area */}
         <Grid item xs={9}>
           <Paper sx={{ height: '100%', padding: 2 }}>
+            {/* Chat Header */}
             <Grid container alignItems="center" sx={{ borderBottom: '1px solid #e0e0e0', paddingBottom: 2, marginBottom: 2 }}>
               <Grid item xs={8}>
                 <Typography variant="h6" color="primary">Jasmine Thomp</Typography>
@@ -75,14 +76,16 @@ function Chat() {
             </Grid>
 
             {/* Messages Section */}
-            <Box sx={{ height: 'calc(100vh - 200px)', overflowY: 'scroll', paddingRight: 2 }}>
+            <Box sx={{ height: 'calc(100vh - 200px)', overflowY: 'auto', paddingRight: 2 }}>
               {/* Example Messages */}
-              <Box sx={{ marginBottom: 2 }}>
-                <Avatar src="/tmp-img/profile-md-1.jpg" sx={{ float: 'left', marginRight: 1 }} />
-                <Paper sx={{ display: 'inline-block', padding: 2, backgroundColor: '#f0f0f0' }}>
-                  <Typography>I hope these articles help.</Typography>
-                </Paper>
-              </Box>
+              {Array(20).fill(null).map((_, idx) => (
+                <Box sx={{ marginBottom: 2 }} key={idx}>
+                  <Avatar src="/tmp-img/profile-md-1.jpg" sx={{ float: 'left', marginRight: 1 }} />
+                  <Paper sx={{ display: 'inline-block', padding: 2, backgroundColor: '#f0f0f0' }}>
+                    <Typography>{`Message from Jasmine - ${idx + 1}`}</Typography>
+                  </Paper>
+                </Box>
+              ))}
               <Box sx={{ marginBottom: 2, textAlign: 'right' }}>
                 <Avatar src="/tmp-img/profile-md-1.jpg" sx={{ float: 'right', marginLeft: 1 }} />
                 <Paper sx={{ display: 'inline-block', padding: 2, backgroundColor: '#007BFF', color: 'white' }}>
@@ -112,7 +115,7 @@ function Chat() {
           </Paper>
         </Grid>
       </Grid>
-    </div>
+    </>
   );
 }
 

@@ -1,0 +1,284 @@
+/* General styles */
+body {
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #f5f7fa;
+  }
+
+  .landing-container {
+	text-align: center;
+	background-color: white;
+  }
+
+  /* Navbar */
+  .navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: #007BFF;
+	color: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;  /* Ensure it stays on top of everything */
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+	font-size: 24px;
+	font-weight: bold;
+	color: white;
+  }
+
+  .nav-links {
+	display: flex;
+	list-style: none;
+  }
+
+  .nav-links li {
+	margin-left: 20px;
+  }
+
+  .nav-links li a {
+	color: white;
+	text-decoration: none;
+  }
+
+  .nav-links li a:hover {
+	text-decoration: underline;
+  }
+
+  .download-btn {
+	background-color: white;
+	color: #007BFF;
+	border: 1px solid #007BFF;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+  }
+
+  .download-btn:hover {
+	background-color: #0056b3;
+	color: white;
+	border: none;
+  }
+
+  /* Ensure the hero section appears below the fixed navbar */
+  .hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 70px; /* Add margin to avoid being overlapped by navbar */
+	padding: 50px 20px;
+  }
+
+  /* Responsive hero section */
+  .hero-left {
+	max-width: 50%;
+  }
+
+  .hero-left h1 {
+	font-size: 48px;
+	color: #007BFF;
+  }
+
+  .hero-left p {
+	font-size: 18px;
+	color: #666;
+	margin: 20px 0;
+  }
+
+  .cta-btn {
+	background-color: #007BFF;
+	color: white;
+	border: none;
+	padding: 15px 30px;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 5px;
+  }
+
+  .cta-btn:hover {
+	background-color: #0056b3;
+  }
+
+  .hero-right img {
+	width: 100%;
+	max-width: 500px;
+  }
+
+  /* Features Section */
+  .features {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;  /* Allow wrapping for responsive design */
+	padding: 50px 20px;
+	background-color: #f5f7fa;
+  }
+
+  .feature-card {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	width: 250px;
+	text-align: center;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	margin: 20px;  /* Add some space between feature cards */
+  }
+
+  .feature-card img {
+	width: 100px;
+	margin-bottom: 20px;
+  }
+
+  .feature-card h3 {
+	font-size: 20px;
+	color: #007BFF;
+  }
+
+  .feature-card p {
+	font-size: 16px;
+	color: #666;
+  }
+
+  /* About Us Section */
+  .about-us {
+	padding: 50px 20px;
+	background-color: #ffffff;
+  }
+
+  .about-us h2 {
+	font-size: 36px;
+	color: #007BFF;
+  }
+
+  .about-us p {
+	font-size: 18px;
+	color: #666;
+	margin: 20px 0;
+  }
+
+  /* Contact Us Section */
+  .contact-us {
+	padding: 50px 20px;
+	background-color: #f5f7fa;
+  }
+
+  .contact-us h2 {
+	font-size: 36px;
+	color: #007BFF;
+  }
+
+  .contact-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+
+  .form-group {
+	margin-bottom: 20px;
+	width: 100%;
+	max-width: 400px;
+  }
+
+  .form-group label {
+	display: block;
+	margin-bottom: 5px;
+	color: #333;
+  }
+
+  .form-group input,
+  .form-group textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+  }
+
+  .contact-form textarea {
+	height: 100px;
+  }
+
+  .submit-btn {
+	background-color: #007BFF;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+
+  .submit-btn:hover {
+	background-color: #0056b3;
+  }
+
+  /* Footer */
+  .footer {
+	margin-top: 50px;
+	padding: 20px;
+	background-color: #007BFF;
+	color: white;
+  }
+
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+	.hero {
+	  flex-direction: column;  /* Stack hero section on smaller screens */
+	}
+
+	.hero-left {
+	  max-width: 100%;
+	}
+
+	.hero-left h1 {
+	  font-size: 36px;
+	}
+
+	.hero-left p {
+	  font-size: 16px;
+	}
+
+	.features {
+	  flex-direction: column;
+	}
+
+	.feature-card {
+	  width: 100%;  /* Make feature cards full width on small screens */
+	}
+
+	.about-us h2,
+	.contact-us h2 {
+	  font-size: 28px;
+	}
+
+	.about-us p,
+	.contact-form p {
+	  font-size: 16px;
+	}
+  }
+
+  @media (max-width: 480px) {
+	.hero-left h1 {
+	  font-size: 28px;
+	}
+
+	.hero-left p {
+	  font-size: 14px;
+	}
+
+	.cta-btn {
+	  padding: 10px 20px;
+	  font-size: 14px;
+	}
+
+	.feature-card h3 {
+	  font-size: 18px;
+	}
+
+	.feature-card p {
+	  font-size: 14px;
+	}
+  }

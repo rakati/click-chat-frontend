@@ -9,7 +9,7 @@ import Chat from './components/Chat';
 
 function App() {
   return (
-    <Router>
+    <Router  basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
